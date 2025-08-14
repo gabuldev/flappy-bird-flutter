@@ -39,12 +39,16 @@ The game will be available at: `https://[username].github.io/[repository-name]/`
 2. **Use the deployment script:**
 
    ```bash
+   cd flappy_bird_flutter
    ./scripts/deploy.sh
    ```
 
    Or manually:
 
    ```bash
+   # From the flappy_bird_flutter directory
+   cd flappy_bird_flutter
+
    # Install dependencies
    flutter pub get
 
@@ -54,7 +58,8 @@ The game will be available at: `https://[username].github.io/[repository-name]/`
    # Build for web
    flutter build web --base-href "/flappy-bird-flutter/"
 
-   # Commit and push
+   # Go back to repository root and commit
+   cd ..
    git add .
    git commit -m "Deploy: Update web build"
    git push origin main
@@ -63,19 +68,22 @@ The game will be available at: `https://[username].github.io/[repository-name]/`
 ## 📁 Project Structure for Deployment
 
 ```
-flappy_bird_flutter/
+repository-root/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml          # GitHub Actions workflow
-├── build/
-│   └── web/                    # Generated web build (not committed)
-├── scripts/
-│   └── deploy.sh               # Deployment helper script
-├── web/
-│   ├── index.html              # Web entry point
-│   ├── manifest.json           # PWA manifest
-│   └── icons/                  # App icons
-└── DEPLOYMENT.md               # This file
+├── flappy_bird_flutter/
+│   ├── build/
+│   │   └── web/                # Generated web build (not committed)
+│   ├── scripts/
+│   │   └── deploy.sh           # Deployment helper script
+│   ├── web/
+│   │   ├── index.html          # Web entry point
+│   │   ├── manifest.json       # PWA manifest
+│   │   └── icons/              # App icons
+│   └── DEPLOYMENT.md           # This file
+├── .nojekyll                   # Prevents Jekyll processing
+└── 404.html                    # Custom 404 page
 ```
 
 ## 🔧 Configuration Details

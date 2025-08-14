@@ -21,12 +21,15 @@ jobs:
           channel: "stable"
 
       - name: Install dependencies
+        working-directory: ./flappy_bird_flutter
         run: flutter pub get
 
       - name: Run tests
+        working-directory: ./flappy_bird_flutter
         run: flutter test
 
       - name: Build web
+        working-directory: ./flappy_bird_flutter
         run: flutter build web --base-href "/flappy-bird-flutter/"
 
       - name: Deploy to GitHub Pages
@@ -34,4 +37,4 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web
+          publish_dir: ./flappy_bird_flutter/build/web

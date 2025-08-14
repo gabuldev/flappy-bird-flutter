@@ -153,3 +153,9 @@
     - Testar responsividade de input em diferentes cenários
     - Fazer ajustes finais baseados nos resultados dos testes
     - _Requirements: 5.1, 5.5, 6.1, 6.2_
+
+- [x] 10 Disponibilizar o flutter web no github pages
+  - Estudar se existe essa possibilidade
+  - Estruturar os passos que precisamos fazer
+  - Fazer o build do flutter web
+  - Subir no github pages

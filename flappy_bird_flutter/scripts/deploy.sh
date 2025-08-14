@@ -4,9 +4,9 @@
 
 echo "🚀 Starting deployment process..."
 
-# Check if we're in the right directory
+# Check if we're in the right directory (should be in flappy_bird_flutter folder)
 if [ ! -f "pubspec.yaml" ]; then
-    echo "❌ Error: pubspec.yaml not found. Please run this script from the Flutter project root."
+    echo "❌ Error: pubspec.yaml not found. Please run this script from the Flutter project root (flappy_bird_flutter folder)."
     exit 1
 fi
 
@@ -34,6 +34,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "📤 Committing and pushing changes..."
+cd ..  # Go to repository root
 git add .
 git commit -m "Deploy: Update web build $(date '+%Y-%m-%d %H:%M:%S')"
 git push origin main
