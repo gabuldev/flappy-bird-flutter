@@ -1,0 +1,1 @@
+ /Users/gabrielsavio/Developer/Youtube/flappy-flutter/flappy_bird_flutter/.dart_tool/flutter_build/71106c4190b89999c4ecbf58980c2756/native_assets.yaml: 
