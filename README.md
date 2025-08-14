@@ -4,7 +4,7 @@ A Flutter implementation of the classic Flappy Bird game, demonstrating Flutter'
 
 ## 🎮 Play Online
 
-**[Play the game here!](https://gabuldev.github.io/flappy-bird-flutter/)**
+**[🎮 Play the game here!](https://gabuldev.github.io/flappy-bird-flutter/)**
 
 ## 📁 Project Structure
 
