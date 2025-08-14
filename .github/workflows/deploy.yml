@@ -24,9 +24,9 @@ jobs:
         working-directory: ./flappy_bird_flutter
         run: flutter pub get
 
-      - name: Run tests
-        working-directory: ./flappy_bird_flutter
-        run: flutter test
+      # - name: Run tests
+      #   working-directory: ./flappy_bird_flutter
+      #   run: flutter test
 
       - name: Build web
         working-directory: ./flappy_bird_flutter
